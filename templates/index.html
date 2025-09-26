@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="filters card">
+  <h2>Find your new best friend</h2>
+  <form id="filter-form">
+    <div class="row">
+      <label>
+        Search
+        <input type="text" name="q" placeholder="Name, breed, city…" />
+      </label>
+      <label>
+        Species
+        <select name="species">
+          <option value="">Any</option>
+          <option>Dog</option>
+          <option>Cat</option>
+          <option>Rabbit</option>
+        </select>
+      </label>
+      <label>
+        Age
+        <select name="age">
+          <option value="">Any</option>
+          <option>Baby</option>
+          <option>Young</option>
+          <option>Adult</option>
+          <option>Senior</option>
+        </select>
+      </label>
+      <label>
+        Size
+        <select name="size">
+          <option value="">Any</option>
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+          <option>X-Large</option>
+        </select>
+      </label>
+      <label>
+        Gender
+        <select name="gender">
+          <option value="">Any</option>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+      </label>
+    </div>
+    <div class="row">
+      <label>
+        City
+        <input type="text" name="city" placeholder="e.g., Pune" />
+      </label>
+      <label>
+        State
+        <input type="text" name="state" placeholder="e.g., Maharashtra" />
+      </label>
+      <label class="checkbox">
+        <input type="checkbox" name="kids" value="true" /> Good with kids
+      </label>
+      <label class="checkbox">
+        <input type="checkbox" name="vaccinated" value="true" /> Vaccinated
+      </label>
+      <label>
+        Sort by
+        <select name="sort">
+          <option value="newest">Newest</option>
+          <option value="name">Name (A–Z)</option>
+          <option value="age">Age (Youngest first)</option>
+        </select>
+      </label>
+      <button type="submit" class="btn">Search</button>
+      <button type="button" id="reset-filters" class="btn btn-secondary">Reset</button>
+    </div>
+  </form>
+</section>
+
+<section>
+  <div id="results" class="grid"></div>
+  <div id="pagination" class="pagination"></div>
+</section>
+
+<!-- Favorites modal -->
+<div id="favorites-modal" class="modal">
+  <div class="modal-content card">
+    <span class="modal-close">&times;</span>
+    <h3>Your Favorites</h3>
+    <div id="favorites-list" class="grid"></div>
+  </div>
+</div>
+{% endblock %}

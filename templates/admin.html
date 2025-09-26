@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <h2>Add a new pet (demo admin)</h2>
+  <form id="admin-add" class="form-stacked">
+    <div class="row">
+      <label>Name <input name="name" required></label>
+      <label>Species
+        <select name="species" required>
+          <option>Dog</option><option>Cat</option><option>Rabbit</option>
+        </select>
+      </label>
+      <label>Breed <input name="breed"></label>
+      <label>Age
+        <select name="age" required>
+          <option>Baby</option><option>Young</option><option>Adult</option><option>Senior</option>
+        </select>
+      </label>
+      <label>Size
+        <select name="size" required>
+          <option>Small</option><option>Medium</option><option>Large</option><option>X-Large</option>
+        </select>
+      </label>
+      <label>Gender
+        <select name="gender" required>
+          <option>Male</option><option>Female</option>
+        </select>
+      </label>
+    </div>
+    <div class="row">
+      <label>City <input name="city"></label>
+      <label>State <input name="state"></label>
+      <label class="checkbox"><input type="checkbox" name="good_with_kids"> Good with kids</label>
+      <label class="checkbox"><input type="checkbox" name="vaccinated"> Vaccinated</label>
+    </div>
+    <label>Description <textarea name="description" rows="3"></textarea></label>
+    <label>Photo URL <input name="photo_url" placeholder="https://…"></label>
+    <button class="btn" type="submit">Add Pet</button>
+    <span id="admin-status" class="muted"></span>
+  </form>
+</section>
+{% endblock %}

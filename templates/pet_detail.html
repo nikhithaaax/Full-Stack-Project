@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<article class="detail card">
+  <div class="detail-media">
+    <img src="{{ pet.photo_url or url_for('static', filename='img/placeholder.png') }}" alt="{{ pet.name }}">
+  </div>
+  <div class="detail-body">
+    <h2>{{ pet.name }}</h2>
+    <p class="muted">{{ pet.species }} • {{ pet.breed or "Mixed" }} • {{ pet.age }} • {{ pet.size }} • {{ pet.gender }}</p>
+    <p class="muted">Location: {{ pet.city or "—" }}, {{ pet.state or "—" }}</p>
+    <ul class="tags">
+      {% if pet.good_with_kids %}<li>Good with kids</li>{% endif %}
+      {% if pet.vaccinated %}<li>Vaccinated</li>{% endif %}
+    </ul>
+    <p>{{ pet.description }}</p>
+
+    <div class="cta-row">
+      <button class="btn add-fav" data-id="{{ pet.id }}">♡ Save</button>
+      <a class="btn btn-secondary" href="{{ url_for('home') }}">Back</a>
+    </div>
+
+    <h3>Apply to adopt {{ pet.name }}</h3>
+    <form id="adopt-form" class="form-stacked" data-pet-id="{{ pet.id }}">
+      <label>Full name <input name="full_name" required></label>
+      <label>Email <input type="email" name="email" required></label>
+      <label>Phone <input name="phone"></label>
+      <label>Message <textarea name="message" rows="4" placeholder="Tell us about your home and experience…"></textarea></label>
+      <button class="btn" type="submit">Submit</button>
+      <span id="adopt-status" class="muted"></span>
+    </form>
+  </div>
+</article>
+{% endblock %}

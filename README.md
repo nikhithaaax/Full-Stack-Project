@@ -28,11 +28,8 @@ It helps users find adoptable pets, apply for adoption, and manage favorites —
 ---
 
 ## 🧩 Tech Stack
-
-| Layer | Technology |
-|-------|-------------|
-| **Frontend** | HTML5, CSS3, jQuery |
-| **Backend** | Python, Flask, Flask-SQLAlchemy |
-| **Database** | SQLite |
-| **Version Control** | Git + GitHub |
-| **Optional Deployment** | Render / Railway / Heroku |
+- HTML5 markup
+- CSS custom properties
+- Bootstrap 4
+- Grid & Flex
+- javascript

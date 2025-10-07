@@ -1,20 +1,38 @@
-# Pet-Finder
+# 🐾 PetFinder+ (Flask + jQuery)
 
-## Demo Link
-<a href="https://nandha-techie.github.io/pet-finder/">LIVE</a>
+A full-stack **Pet Finder** web application built with **Flask**, **SQLite**, and **jQuery**.  
+It helps users find adoptable pets, apply for adoption, and manage favorites — all through a dynamic, responsive interface.
 
-## About Bootstrap Project
+---
 
-<p>The bootstrap project explains the fundamental concepts of bootstrap class, including as nav and carousel etc. To acquire bootstrap quickly, practise regularly.</p>
+## 🚀 Features
 
-## Built with
+✅ **Frontend**
+- Built with HTML, CSS, and jQuery (AJAX for dynamic updates)
+- Search, filter, and sort pets by multiple criteria
+- Favorites system (saved with localStorage)
+- Responsive grid layout and modern UI
+- Adoption request form with validation and feedback messages
 
-- HTML5 markup
-- CSS custom properties
-- Bootstrap 4
-- Grid & Flex
-- javascript
-- Desktop and mobile-first
-## Helps you learn
+✅ **Backend**
+- Flask app with REST API routes
+- SQLite database (auto-created and seeded)
+- SQLAlchemy models for `Pet` and `AdoptionRequest`
+- Admin interface to add new pets (no authentication, demo only)
 
-Simple project to learn and develop frontend techniques.
+✅ **Extras**
+- Pagination and sorting
+- Seed data for demo pets
+- Works locally — no external APIs required
+
+---
+
+## 🧩 Tech Stack
+
+| Layer | Technology |
+|-------|-------------|
+| **Frontend** | HTML5, CSS3, jQuery |
+| **Backend** | Python, Flask, Flask-SQLAlchemy |
+| **Database** | SQLite |
+| **Version Control** | Git + GitHub |
+| **Optional Deployment** | Render / Railway / Heroku |
